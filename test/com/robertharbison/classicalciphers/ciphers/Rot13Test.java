@@ -1,18 +1,20 @@
-package com.robertharbison.classicciphers.ciphers;
+package com.robertharbison.classicalciphers.ciphers;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AffineCipherTest {
+import com.robertharbison.classicalciphers.ciphers.Rot13;
 
+public class Rot13Test {
+	
 	@Test
 	public void testAlphabet() {
 		String startMessage = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		String encoded = AffineCipher.encrypt(startMessage, 9, 4);
-		Assert.assertEquals("cipher", "enwfoxgpyhqzirajsbktcludmvENWFOXGPYHQZIRAJSBKTCLUDMV", encoded);
+		String encoded = Rot13.encrypt(startMessage);
+		Assert.assertEquals("cipher", "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM", encoded);
 		
-		String decoded = AffineCipher.decrypt(encoded, 9, 4);
+		String decoded = Rot13.encrypt(encoded);
 		Assert.assertEquals("decipher", startMessage, decoded);
 	}
 	
@@ -20,7 +22,7 @@ public class AffineCipherTest {
 	public void testSpecialCharactersAndSpaces() {
 		String startMessage = "/?.>,<'\";:|[] {} =+-_)(*&^%$#@!~`\\";
 		
-		String encoded = AffineCipher.encrypt(startMessage, 9, 4);
+		String encoded = Rot13.encrypt(startMessage);
 		Assert.assertEquals(startMessage, encoded);
 	}
 	
@@ -28,7 +30,7 @@ public class AffineCipherTest {
 	public void testNumbers() {
 		String startMessage = "0123456789";
 		
-		String encoded = AffineCipher.encrypt(startMessage, 9, 4);
+		String encoded = Rot13.encrypt(startMessage);
 		Assert.assertEquals(startMessage, encoded);
 	}
 }

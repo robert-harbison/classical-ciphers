@@ -3,9 +3,9 @@
  * is mapped to its numeric equivalent and then encrypted using a simple mathematical equation.
  */
 
-package com.robertharbison.classicciphers.ciphers;
+package com.robertharbison.classicalciphers.ciphers;
 
-import static com.robertharbison.classicciphers.CommonCiphers.LETTERS_IN_ALPHABET;
+import static com.robertharbison.classicalciphers.ClassicalCiphers.LETTERS_IN_ALPHABET;
 
 import java.math.BigInteger;
 

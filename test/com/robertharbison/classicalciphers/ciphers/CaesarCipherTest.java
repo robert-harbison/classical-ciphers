@@ -1,7 +1,9 @@
-package com.robertharbison.classicciphers.ciphers;
+package com.robertharbison.classicalciphers.ciphers;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.robertharbison.classicalciphers.ciphers.CaesarCipher;
 
 public class CaesarCipherTest {
 	

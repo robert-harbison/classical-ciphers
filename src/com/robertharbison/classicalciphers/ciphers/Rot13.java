@@ -5,7 +5,7 @@
  * same algorithm twice will bring you back to the starting input.
  */
 
-package com.robertharbison.classicciphers.ciphers;
+package com.robertharbison.classicalciphers.ciphers;
 
 public class Rot13 {
 
