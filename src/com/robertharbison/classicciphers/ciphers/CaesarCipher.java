@@ -9,13 +9,13 @@ package com.robertharbison.classicciphers.ciphers;
 import static com.robertharbison.classicciphers.CommonCiphers.LETTERS_IN_ALPHABET;
 
 public class CaesarCipher {
-
+	
 	/**
-	 * Uses Caesar Cipher to cipher a message.
+	 * Encrypt message using Caesar Cipher.
 	 * 
-	 * @param input The input that you would like to cipher.
-	 * @param shift The number of letters you want to shift.
-	 * @return The result of the ciphered input.
+	 * @param input The input message to be encrypted.
+	 * @param shift The number of letters to shift each character by.
+	 * @return The result of the encrypted input.
 	 */
 	public static String encrypt(String input, int shift) {
 		StringBuilder result = new StringBuilder();
@@ -36,11 +36,11 @@ public class CaesarCipher {
 	}
 	
 	/**
-	 * Uses Caesar Cipher to decipher a message.
+	 * Decrypt message using Caesar Cipher.
 	 * 
-	 * @param input The input that you would like to decipher.
-	 * @param shift The number of letters you want to shift.
-	 * @return The result of the deciphered input..
+	 * @param input The input message to be decrypted.
+	 * @param shift The number of letters to shift each character by.
+	 * @return The result of the decrypted input.
 	 */
 	public static String decrypt(String input, int shift) {
 		// Calculates the shift needed to shift it all the way around.
@@ -52,8 +52,8 @@ public class CaesarCipher {
 	 * Shifts a character x times in the alphabet.
 	 * 
 	 * @param c The character to shift.
-	 * @param startingChar The character in the alphabet to start shifting by.
-	 * @param shift How much to shift by.
+	 * @param startingChar The starting character of the alphabet depending on if 'c' is capital. (Generally either 'a' or 'A')
+	 * @param shift The number of letters to shift each character by.
 	 * @return The new character.
 	 */
 	private static char shift(char c, char startingChar, int shift) {
