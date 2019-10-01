@@ -23,6 +23,45 @@ is mapped to its numeric equivalent and then encrypted using a simple mathematic
 Atbash Cipher is a monoalphabetic substitution cipher where each character is mapped to its
 reverse so A is Z, B is Y, C is X etc.
 
+##How To Use
+```
+public static void rot13Example() {
+	/**
+	 * Some of the algorithms such as Rot13 don't use a different
+	 * decrypt algorithm so you should use the encrypt method for
+	 * both encryption and decryption
+	 */
+	
+	// Encrypt "Hello World!" and store it in a string
+	String encrypted = ClassicalCiphers.encryptRot13("Hello world!");
+	
+	// Print the encrypted string
+	System.out.println(encrypted);
+	
+	// Decrypt the encrypted string and store it in a new string.
+	String decrypted = ClassicalCiphers.encryptRot13(encrypted);
+	
+	// Prints the decrypted string which is
+	System.out.println(decrypted);
+}
+```
+
+```
+public static void affineExample() {
+	// Encrypt "Hello World!" and store it in a string
+	String encrypted = ClassicalCiphers.encryptAffine("Hello world!", 9, 15);
+		
+	// Print the encrypted string
+	System.out.println(encrypted);
+		
+	// Decrypt the encrypted string and store it in a new string.
+	String decrypted = ClassicalCiphers.decryptAffine(encrypted, 9, 15);
+		
+	// Prints the decrypted string which is
+	System.out.println(decrypted);
+}
+```
+
 ## Todo:
 + Polybius Square Cipher
 + Autokey Cipher
