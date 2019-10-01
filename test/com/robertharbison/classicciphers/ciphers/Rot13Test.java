@@ -3,16 +3,16 @@ package com.robertharbison.classicciphers.ciphers;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CaesarCipherTest {
+public class Rot13Test {
 	
 	@Test
 	public void testAlphabet() {
 		String startMessage = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		String encoded = CaesarCipher.encrypt(startMessage, 7);
-		Assert.assertEquals("cipher", "hijklmnopqrstuvwxyzabcdefgHIJKLMNOPQRSTUVWXYZABCDEFG", encoded);
+		String encoded = Rot13.encrypt(startMessage);
+		Assert.assertEquals("cipher", "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM", encoded);
 		
-		String decoded = CaesarCipher.decrypt(encoded, 7);
+		String decoded = Rot13.encrypt(encoded);
 		Assert.assertEquals("decipher", startMessage, decoded);
 	}
 	
@@ -20,7 +20,7 @@ public class CaesarCipherTest {
 	public void testSpecialCharactersAndSpaces() {
 		String startMessage = "/?.>,<'\";:|[] {} =+-_)(*&^%$#@!~`\\";
 		
-		String encoded = CaesarCipher.encrypt(startMessage, 7);
+		String encoded = Rot13.encrypt(startMessage);
 		Assert.assertEquals(startMessage, encoded);
 	}
 	
@@ -28,7 +28,7 @@ public class CaesarCipherTest {
 	public void testNumbers() {
 		String startMessage = "0123456789";
 		
-		String encoded = CaesarCipher.encrypt(startMessage, 7);
+		String encoded = Rot13.encrypt(startMessage);
 		Assert.assertEquals(startMessage, encoded);
 	}
 }
