@@ -26,7 +26,7 @@ reverse so A is Z, B is Y, C is X etc.
 ## Todo:
 + Polybius Square Cipher
 + Autokey Cipher
-+ Vigenère cipher
++ VigenÃ¨re cipher
 + Four-Square Cipher
 + Hill Cipher
 + Straddle Checkerboard Cipher
