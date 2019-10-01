@@ -3,21 +3,26 @@ package com.robertharbison.commonciphers.ciphers;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Rot13Test {
+import com.robertharbison.commonciphers.CommonCiphers;
+
+public class CaesarCipherTest {
 	
 	@Test
 	public void testAlphabet() {
 		String startMessage = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		String encoded = Rot13.cipher(startMessage);
-		Assert.assertEquals("nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM", encoded);
+		String encoded = CommonCiphers.cipherCaesarCipher(startMessage, 7);
+		Assert.assertEquals("cipher", "hijklmnopqrstuvwxyzabcdefgHIJKLMNOPQRSTUVWXYZABCDEFG", encoded);
+		
+		String decoded = CommonCiphers.decipherCaesarCipher(encoded, 7);
+		Assert.assertEquals("decipher", startMessage, decoded);
 	}
 	
 	@Test
 	public void testSpecialCharactersAndSpaces() {
 		String startMessage = "/?.>,<'\";:|[] {} =+-_)(*&^%$#@!~`\\";
 		
-		String encoded = Rot13.cipher(startMessage);
+		String encoded = CommonCiphers.cipherCaesarCipher(startMessage, 7);
 		Assert.assertEquals(startMessage, encoded);
 	}
 	
@@ -25,7 +30,7 @@ public class Rot13Test {
 	public void testNumbers() {
 		String startMessage = "0123456789";
 		
-		String encoded = Rot13.cipher(startMessage);
+		String encoded = CommonCiphers.cipherCaesarCipher(startMessage, 7);
 		Assert.assertEquals(startMessage, encoded);
 	}
 }
