@@ -1,3 +1,8 @@
+/**
+ * Implementation of the Atbash Cipher which is a monoalphabetic substitution cipher where each character
+ * is mapped to its reverse so A is Z, B is Y, C is X etc.
+ */
+
 package com.robertharbison.classicciphers.ciphers;
 
 import static com.robertharbison.classicciphers.CommonCiphers.LETTERS_IN_ALPHABET;
