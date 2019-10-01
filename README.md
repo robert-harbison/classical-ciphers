@@ -1,8 +1,8 @@
 # Classical Ciphers
 
-Classical Ciphers is a Java library that adds different types of encryption. <b>Please Note:
+Classical Ciphers is a Java library that adds different types of encryption. **Please Note:
 These should not be used for anything that requires actual security as these are easy to
-crack.</b>
+crack.**
 
 ## Supported Ciphers
 ### Caesar Cipher
