@@ -23,7 +23,7 @@ is mapped to its numeric equivalent and then encrypted using a simple mathematic
 Atbash Cipher is a monoalphabetic substitution cipher where each character is mapped to its
 reverse so A is Z, B is Y, C is X etc.
 
-##How To Use
+## How To Use
 ```
 public static void rot13Example() {
 	/**
